@@ -4,7 +4,7 @@ Preparation:
 
 To deploy a SW Delivery Pipeline using CDK, you will need the following resources:
 
-•	AWS CLI (We will be using Cloud9 so AWS CLI is already installed)
+•	AWS CLI (We will be using Cloud9, so AWS CLI is already installed)
 •	AWS account and associated credentials (We are using Cloud9 so we should already have this)
 
  Steps:
@@ -54,7 +54,7 @@ cdk init app --language python
 source .venv/bin/activate
 python -m pip install -r requirements.txt.
 
-6.	Once the activation is successful, edit your sw_pipeline_stack.py file and add the code listed under the sw_pipeline_stack.py file. Also, upload your Java Project.zip file to your sw_pipeline folder.
+6.	Once the activation is successful, edit your sw_pipeline_stack.py file and add the code listed under the sw_pipeline_stack.py file. Also, upload your Java-Project.zip file to your sw_pipeline folder.
 
 7.	After updating the code as mentioned above, synthesize the cdk configuration files from the existing code using the following command:
 cdk synth
@@ -64,7 +64,8 @@ cdk synth
 9.	Now deploy your application using the following command:
  cdk deploy
 
-10.	Once your application is successfully deployed, check CodeCommit and Code Build to ensure your project files and build project exists. 
+10.	Once your application is successfully deployed, validate that all resources were created, and the pipeline was properly built.
 
-11.	Once you see it being successfully built, and a new artifact uploaded into the S3 artifact bucket, you’re ready to continue working on the next stage of the project.
+11.	After ensuring everything works properly, make sure you delete all resources you’ve created to avoid unnecessary charges.
+
 
