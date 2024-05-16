@@ -1,0 +1,161 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "SwPipelineStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "SwPipelineStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "SwPipelineStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "SwPipelineStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/7efcc5990a09ff6c330e0935f7f1fb7d21dd9d82ac5c7d65f37e9b83f67581d4.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "SwPipelineStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "SwPipelineStack.assets"
+      ],
+      "metadata": {
+        "/SwPipelineStack/SWPipelineRepo/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineRepo34ACC0C2"
+          }
+        ],
+        "/SwPipelineStack/SWPipelineRepo/SwPipelineStackSWPipeline56F4B550EventRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineRepoSwPipelineStackSWPipeline56F4B550EventRuleE2385EC4"
+          }
+        ],
+        "/SwPipelineStack/SWPipelineBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineBucket4F90BEB8"
+          }
+        ],
+        "/SwPipelineStack/SWPipelineBuild/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineBuildRole5B9C2D2A"
+          }
+        ],
+        "/SwPipelineStack/SWPipelineBuild/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineBuildRoleDefaultPolicy1A674AA7"
+          }
+        ],
+        "/SwPipelineStack/SWPipelineBuild/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineBuild5B15936D"
+          }
+        ],
+        "/SwPipelineStack/AppBuildRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AppBuildRole8A1C3CBF"
+          }
+        ],
+        "/SwPipelineStack/AppBuildRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AppBuildRoleDefaultPolicyC70CA925"
+          }
+        ],
+        "/SwPipelineStack/SWPipeline/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipeline71B9574C"
+          }
+        ],
+        "/SwPipelineStack/SWPipeline/Source/Source/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineSourceCodePipelineActionRoleD56C2915"
+          }
+        ],
+        "/SwPipelineStack/SWPipeline/Source/Source/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineSourceCodePipelineActionRoleDefaultPolicy297CADDB"
+          }
+        ],
+        "/SwPipelineStack/SWPipeline/EventsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineEventsRoleB061B459"
+          }
+        ],
+        "/SwPipelineStack/SWPipeline/EventsRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineEventsRoleDefaultPolicyD2FF27AF"
+          }
+        ],
+        "/SwPipelineStack/SWPipeline/Build/Build/CodePipelineActionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineBuildCodePipelineActionRole1CAEFCC5"
+          }
+        ],
+        "/SwPipelineStack/SWPipeline/Build/Build/CodePipelineActionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SWPipelineBuildCodePipelineActionRoleDefaultPolicy4D36AB6D"
+          }
+        ],
+        "/SwPipelineStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/SwPipelineStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/SwPipelineStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/SwPipelineStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "SwPipelineStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
