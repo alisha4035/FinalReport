@@ -1,6 +1,6 @@
 # FinalReport-CDK to build a Software Delivery Pipeline (Step by Step Instructions)
 
-Preparation:
+Preparation: 
 
 To deploy a SW Delivery Pipeline using CDK, you will need the following resources:
 
